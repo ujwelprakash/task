@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Global Styles */
+body {
+  @apply bg-gray-100 text-gray-900;
+}
+
+/* Custom Button Styles */
+.btn {
+  @apply px-6 py-3 rounded-lg shadow-md font-semibold transition-all;
+}
+.btn-primary {
+  @apply bg-blue-500 text-white hover:bg-blue-600;
+}
+.btn-secondary {
+  @apply bg-green-500 text-white hover:bg-green-600;
+}
+
+/* Custom Input Styles */
+.input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Custom Card Component */
+.card {
+  @apply bg-white shadow-lg rounded-lg p-6;
+}
+
+/* Responsive Container */
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+/* Smooth Hover Effect */
+.hover-underline {
+  @apply relative;
+}
+.hover-underline::after {
+  content: "";
+  @apply absolute left-0 bottom-0 w-full h-1 bg-yellow-400 scale-x-0 transition-transform duration-300;
+}
+.hover-underline:hover::after {
+  @apply scale-x-100;
+}
